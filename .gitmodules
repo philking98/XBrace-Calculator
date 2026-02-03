@@ -1,0 +1,3 @@
+[submodule "html/footinch"]
+	path = html/footinch
+	url = https://github.com/dobriai/footinch.git
