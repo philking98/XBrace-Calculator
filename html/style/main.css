@@ -1,0 +1,76 @@
+.whole-page {
+	max-width: 400px;
+	background: linen;
+	border-radius: 10px;
+	border: 1px solid white;
+	justify-content: center;
+	margin: auto;
+	margin-top: 75px;
+	font-size: 12px;
+	font-family: Arial;
+}
+
+.canvas-container {
+	width: 100%;
+	margin: 20px 0;
+	text-align:center;
+}
+
+#xbrace-diagram {
+	background: ivory;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+
+input {
+	font-size: 12px;
+	font-family: Arial;
+	margin: 2px 0;
+}
+
+input:disabled {
+	background: white;
+}
+
+label {
+	display: inline-block;
+	width: 33%;
+	text-align: right;
+}
+
+.outside {
+	position: relative; /* Establishes positioning context */
+	border: 1px solid black;
+	margin: 15px 20px;
+}
+
+.outside-label {
+	position: absolute; /* Positions text relative to the container */
+	top: -0.67em; /* Moves text up, outside normal flow */
+	left: 0.5em;
+	background-color: linen;
+	z-index: 1; /* Ensures text is above the border line */
+}
+
+.inside {
+	margin: 10px 0 0 0;
+}
+
+
+.calc-button {
+/*	font-size: 14px;*/
+	border-radius: 6px;
+	border: 1px solid black;
+	cursor: pointer;
+	float: right;
+	margin-right: 10px;
+}
+
+.calc-button:hover {
+  background-color: lightgreen;
+}
+
+.calc-button:active {
+  box-shadow: 2px 2px 5px lawngreen;
+}
+
