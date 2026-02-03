@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script id="MathJax-script" async
+		src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js">
+	</script>
+	<title>X-Brace Calculator - The Math</title>
+</head>
+<body>
+	<div>
+		<p>
+		<img src="./img/xbrace-diagram.svg" alt="description here" />
+		</p>
+		<p>
+			Known values:<br/>
+			\(w \Rightarrow \text{width of bay}\)<br/>
+			\(h \Rightarrow \text{height of bay}\)<br/>
+			\(n \Rightarrow \text{number of crosses in bay}\)<br/>
+			\(d \Rightarrow \text{width of dimensional lumber}\)<br/>
+			Solve for:<br/>
+			\(t \Rightarrow \text{angle of brace}\)<br/>
+			\(l \Rightarrow \text{length of brace}\)
+		</p>
+		<p>
+			\(l=\frac{w}{\cos(t)}\)<br/>
+			\(\tan(x)=\frac{h_{1}}{w}\) AND \(h_{1}+h_{2}=\frac{h}{n}\) OR \(h_{1}=\frac{h}{n}-h_{2}\)<br/>
+			\(\tan(x)=\frac{\frac{h}{n}-h_{2}}{w}\)<br/>
+			\(w\tan(x)=\frac{h}{n}-h_{2}\) AND \(h_{2}=\frac{d}{\cos(t)}\)<br/>
+			\(w\tan(x)=\frac{h}{n}-\frac{d}{\cos(t)}\)<br/>
+			\(w\tan(x)\cos(t)=\frac{h}{n}\cos(t)-d\) AND \(\tan(t)\cos(t)=\sin(t)\)<br/>
+			\(w\sin(x)=\frac{h}{n}\cos(t)-d\)<br/>
+			\(w\sin(t)-\frac{h}{n}\cos(t)=-d\)
+		</p>
+		<p>
+			\(a\sin(t)-b\cos(t)=c\)<br/>
+			\(R=\sqrt{a^{2}+b^{2}}\)<br/>
+			\(\phi=\tan^{-1}(\frac{b}{a})\)<br/>
+			\(\sin(t-\phi)=\frac{c}{R}\)<br/>
+			\(t=\sin^{-1}(\frac{c}{R})+\phi\)
+		</p>
+		<p>Back to the <a href="index.html">calculator</a></p>
+	</div>
+</body>
+</html>
