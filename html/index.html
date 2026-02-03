@@ -3,12 +3,68 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>X-Brace Calculator</title>
+	<link rel="stylesheet" href="./style/main.css">
+	<script src="./footinch/lib/parse.js"></script>
+	<script src="./lib/xbrace-calc.js"></script>
+	<title>Calculator</title>
 </head>
 <body>
-	<div>
-		<p>X-Brace Calculater goes here.</p>
-		<p>Read about the math <a href="themath.html">here</>.
+	<div class="whole-page">
+		<div class="canvas-container">
+			<canvas id="xbrace-diagram" height="640px" width="360px"></canvas>
+		</div>
+		<div class="outside">
+        	<span class="outside-label">&nbsp;Measurements&nbsp;</span>
+		    <div class="inside">
+
+				<label for="number-xbraces"># X braces: </label>
+				<select name="number-xbraces" id="number-xbraces" onchange="calcXBrace()">
+					<option value="1">1</option>
+					<option value="2" selected>2</option>
+					<option value="3" >3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select><br/>
+
+				<label for="bay-height">Height: </label>
+				<input type="text" id="bay-height" name="bay-height" value="222&quot;" size="10" onchange="calcXBrace()"><br/>
+
+				<label for="bay-width">Width: </label>
+				<input type="text" id="bay-width" name="bay-width" value="7&apos; 2 1/4&quot;" size="10" onchange="calcXBrace()"><br/>
+
+				<label for="xbrace-width">2x Dimension: </label>
+				<input type="text" id="xbrace-width" name="xbrace-width" value="7 1/4&quot;" size="6" onchange="calcXBrace()"> 
+				<select name="lumber" id="lumber" onchange="fillDimension()">
+					<option value="3 1/2&quot;">2x4</option>
+					<option value="5 1/2&quot;">2x6</option>
+					<option value="7 1/4&quot;" selected>2x8</option>
+					<option value="9 1/4&quot;">2x10</option>
+					<option value="11 1/4&quot;">2x12</option>
+				</select>
+				<button class="calc-button" type="button" onclick="calcXBrace()">&crarr;</button><br/>
+			</div>
+		</div>
+		<div class="outside">
+		    <span class="outside-label">&nbsp;Results&nbsp;</span>
+		    <div class="inside">
+
+				<label for="xbrace-length">Length: </label>
+				<input type="text" id="xbrace-length" name="xbrace-length" disabled size="10">
+				<input type="text" id="xbrace-rise" name="xbrace-rise" disabled hidden><br/>
+
+				<label for="xbrace-angle">Cut angle: </label>
+				<input type="text" id="xbrace-angle" name="xbrace-angle" disabled size="10"><br/>
+
+				<label for="xbrace-angle">Cut pitch: </label>
+				<input type="text" id="xbrace-pitch" name="xbrace-pitch" disabled size="10"> (rise for 12" run)<br/>
+
+			</div>
+		</div>
 	</div>
+	<script>
+		window.onload = function () {
+  			calcXBrace();
+  		}
+	</script>
 </body>
 </html>
