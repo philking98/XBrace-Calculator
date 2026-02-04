@@ -19,9 +19,9 @@ h2. A final value for "t" and the length of the brace, "l" is then calculated.
 
 My curiosity got the best of me and I wanted to see if it was possible to derive the 
 dimensions for the x brace ("t" and "l") without using the approximation. I believe I have 
-an answer which is [documented here](./html/themath.html).
+an answer which is [documented here](https://philking98.github.io/XBrace-Calculator/html/themath.html).
 
-I then implemented the calculation in [javascript and html](./html/index.html).
+I then implemented the calculation in [javascript and html](https://philking98.github.io/XBrace-Calculator/html/index.html).
 
 In the example in the video I linked above, the height of the bay ("h") is 222", the width of 
 the bay ("w") is 7' 2 1/4", the lumber is 2x6 so the width of the brace ("d") is 5 1/2", and 
