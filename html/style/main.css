@@ -1,5 +1,5 @@
 .whole-page {
-	max-width: 400px;
+	max-width: 512px;
 	background: linen;
 	border-radius: 10px;
 	border: 1px solid white;
@@ -20,6 +20,10 @@
 	background: ivory;
 	border: 1px solid black;
 	border-radius: 10px;
+}
+
+p {
+	margin: 10px 20px;
 }
 
 input {
@@ -55,7 +59,6 @@ label {
 .inside {
 	margin: 10px 0 0 0;
 }
-
 
 .calc-button {
 /*	font-size: 14px;*/
