@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="./style/main.css">
 	<script src="./footinch/lib/parse.js"></script>
 	<script src="./lib/xbrace-calc.js"></script>
-	<title>Calculator</title>
+	<title>X-Brace Calculator</title>
 </head>
 <body>
 	<div class="whole-page">
@@ -60,9 +60,33 @@
 
 			</div>
 		</div>
+		<p><a href="themath.html">The math</a></p>
 	</div>
 	<script>
+		function cleanFancyQuotes(element) {
+
+			let s = element.value;
+            s = s.replace(/[\u2018\u2019]/g, "'");
+        	element.value = s.replace(/[\u201C\u201D]/g, '"');
+		}
+
 		window.onload = function () {
+
+        	document.getElementById("bay-height")
+            	.addEventListener("input", (e) => {
+              		cleanFancyQuotes(e.target);
+          	});
+
+        	document.getElementById("bay-width")
+            	.addEventListener("input", (e) => {
+              		cleanFancyQuotes(e.target);
+          	});
+
+        	document.getElementById("xbrace-width")
+            	.addEventListener("input", (e) => {
+              		cleanFancyQuotes(e.target);
+          	});
+
   			calcXBrace();
   		}
 	</script>
