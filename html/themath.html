@@ -3,44 +3,87 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script id="MathJax-script" async
-		src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js">
-	</script>
+<script>
+  MathJax = {
+    tex: {
+      tags: 'all'
+    }
+  };
+  </script>
+	<script id="MathJax-script" defer
+    	src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js">
+    </script>
+	<link rel="stylesheet" href="./style/main.css">
 	<title>X-Brace Calculator - The Math</title>
 </head>
 <body>
-	<div>
-		<p>
-		<img src="./img/xbrace-diagram.svg" alt="description here" />
-		</p>
-		<p>
-			Known values:<br/>
-			\(w \Rightarrow \text{width of bay}\)<br/>
-			\(h \Rightarrow \text{height of bay}\)<br/>
-			\(n \Rightarrow \text{number of crosses in bay}\)<br/>
-			\(d \Rightarrow \text{width of dimensional lumber}\)<br/>
-			Solve for:<br/>
-			\(t \Rightarrow \text{angle of brace}\)<br/>
-			\(l \Rightarrow \text{length of brace}\)
-		</p>
-		<p>
-			\(l=\frac{w}{\cos(t)}\)<br/>
-			\(\tan(x)=\frac{h_{1}}{w}\) AND \(h_{1}+h_{2}=\frac{h}{n}\) OR \(h_{1}=\frac{h}{n}-h_{2}\)<br/>
-			\(\tan(x)=\frac{\frac{h}{n}-h_{2}}{w}\)<br/>
-			\(w\tan(x)=\frac{h}{n}-h_{2}\) AND \(h_{2}=\frac{d}{\cos(t)}\)<br/>
-			\(w\tan(x)=\frac{h}{n}-\frac{d}{\cos(t)}\)<br/>
-			\(w\tan(x)\cos(t)=\frac{h}{n}\cos(t)-d\) AND \(\tan(t)\cos(t)=\sin(t)\)<br/>
-			\(w\sin(x)=\frac{h}{n}\cos(t)-d\)<br/>
-			\(w\sin(t)-\frac{h}{n}\cos(t)=-d\)
-		</p>
-		<p>
-			\(a\sin(t)-b\cos(t)=c\)<br/>
-			\(R=\sqrt{a^{2}+b^{2}}\)<br/>
-			\(\phi=\tan^{-1}(\frac{b}{a})\)<br/>
-			\(\sin(t-\phi)=\frac{c}{R}\)<br/>
-			\(t=\sin^{-1}(\frac{c}{R})+\phi\)
-		</p>
-		<p>Back to the <a href="index.html">calculator</a></p>
+	<div class="whole-page">
+		<div style="text-align: center; margin: 10px 20px">
+			<img src="./img/xbrace-diagram.svg" alt="description here" />
+		</div>
+		<div style="margin: 10px 20px">
+			<p style="text-indent: -2em">
+				Known values:<br/>
+				\(w \Rightarrow\) width of bay<br/>
+				\(h \Rightarrow\) height of bay<br/>
+				\(n \Rightarrow\) number of crosses in bay<br/>
+				\(d \Rightarrow\) width of dimensional lumber
+			</p>
+			<p style="text-indent: -2em">
+				Solve for:<br/>
+				\(t \Rightarrow\) angle of brace<br/>
+				\(l \Rightarrow\) length of brace
+			</p>
+		</div>
+		<div>
+			<p>
+				Looking at the larger triangle [\(w, h_{1}\), \(l\)]
+				$$\cos(t)=\frac{w}{l}$$
+				Solving for \(l\)
+				$$l=\frac{w}{\cos(t)}\label{ref10}$$
+				The value of \(w\) is known. Finding a soluton for the angle \(t\), gets us the value of \(l\).
+			</p>
+			<p>
+				The larger triangle yields
+				$$\tan(t)=\frac{h_{1}}{w}\label{ref1}$$
+				The smaller triangle with hypotenuse of \(h_{2}\) and side \(d\)
+				$$\cos(t)=\frac{d}{h_{2}}\label{ref2}$$
+				The diagram also yields the observation.
+				$$h_{1}+h_{2}=\frac{h}{n}\label{ref3}$$ 
+				Solving equation (\ref{ref1}) for \(h_{1}\) and equation (\ref{ref2}) for 
+				\(h_{2}\). The values are substituted into equation (\ref{ref3}) to yield.
+				$$w\tan(t)+\frac{d}{\cos(t)}=\frac{h}{n}\label{ref4}$$
+				Multply both sides of equation (\ref{ref4}) by \(\cos(t)\)
+				$$w\tan(t)\cos(t)+d=\frac{h}{n}\cos(t)$$
+				The \(\tan(t)\cos(t)\) is equivalent to \(\sin(t)\)
+				$$w\sin(t)+d=\frac{h}{n}\cos(t)$$
+				$$w\sin(t)-\frac{h}{n}\cos(t)=-d\label{ref5}$$
+			</p>
+			<p>
+				The result is the sum of the sine and cosine of the same angle \(t\) in 
+				terms of other known values. A function of 
+				the form \(a\sin(\theta)-b\cos(\theta)\) results in a phase shift sine 
+				curve with new amplitude of the form \(R\sin(\theta+\phi)\). \(R\) is the 
+				new amplitude and \(\phi\) is the phase shift where
+				$$R=\sqrt{a^{2}+b^{2}}\text{ and }\phi=\tan^{-1}(\frac{b}{a})$$
+				Substituting terms into equation (\ref{ref5}) results in
+				$$R\sin(t+\phi)=-d\label{ref6}$$
+				Where
+				$$R=\sqrt{w^{2}+(\frac{h}{n})^{2}}\text{ and }\phi=\tan^{-1}(\frac{\frac{h}{n}}{w})\label{ref7}$$
+				Solving equation (\ref{ref6}) for \(t\)
+				$$\sin(t+\phi)=\frac{-d}{R}$$
+				$$t+\phi=sin^{1}(\frac{-d}{R})$$
+				$$t=sin^{1}(\frac{-d}{R})-\phi\label{ref8}$$
+				Equation (\ref{ref7}) expresses \(R\) and \(\phi\) using known values and
+				plugging that into equation (\ref{ref8}) results in our solution for the 
+				angle \(t\) as a function of known values
+				$$t=sin^{1}(\frac{-d}{\sqrt{w^{2}+(\frac{h}{n})^{2}}})-\tan^{-1}(\frac{\frac{h}{n}}{w})\label{ref9}$$
+				Equation (\ref{ref9}) and (\ref{ref10}) gives the solution to the two unknown values.
+			</p>
+			<p>
+				This solution is implemented in the <a href="index.html">X Brace calculator</a>
+			</p>
+		</div>
 	</div>
 </body>
 </html>
