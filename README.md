@@ -13,20 +13,20 @@ Here is a diagram of what the geometry looks like:
 ![X Brace geometry](./html/img/xbrace-diagram.svg "X Brace geometry")
 
 In the video, Kyle approximates the angle "*t*" using a triangle with sides "*w*" and "*h/n*" 
-(the acutal angle "t" has sides "w" and "*h<sub>1</sub>*"). The approximate angle "t" allows Kyle to
-calculate the value of h2. The value h1 is calculates from "h/n" minus the approximated 
-h2. A final value for "t" and the length of the brace, "l" is then calculated.
+(the actual angle "*t*" has sides "*w*" and "*h<sub>1</sub>*"). The approximate angle "*t*" allows Kyle to
+calculate the value of *h<sub>2</sub>*. The value *h<sub>1</sub>* is calculates from "*h/n*" minus the approximated 
+*h<sub>2</sub>*. A final value for "*t*" and the length of the brace, "*l*" is then calculated.
 
 My curiosity got the best of me and I wanted to see if it was possible to derive the 
-dimensions for the x brace ("t" and "l") without using the approximation. I believe I have 
+dimensions for the x brace ("*t*" and "*l*") without using the approximation. I believe I have 
 an answer which is [documented here](https://philking98.github.io/XBrace-Calculator/html/themath.html).
 
 I implemented the calculation in [javascript and html](https://philking98.github.io/XBrace-Calculator/html/index.html).
 
-In the example in the video I linked above, the height of the bay ("h") is 222", the width of 
-the bay ("w") is 7' 2 1/4", the lumber is 2x6 so the width of the brace ("d") is 5 1/2", and 
-2 braces are being constructed. Using Kyle's method, he calculates a brace length ("l") as 
-133 5/8" and angle ("t") of 49.80° or pitch of 14 3/16". Using my x brace calculater, I 
-get a brace length ("l") of 133 15/16" and an angle ("t") of 49.91° or pitch of 14 1/4".
+In the example in the video I linked above, the height of the bay ("*h*") is 222", the width of 
+the bay ("*w*") is 7' 2 1/4", the lumber is 2x6 so the width of the brace ("*d*") is 5 1/2", and 
+2 braces (*n*) are being constructed. Using Kyle's method, he calculates a brace length ("*l*") as 
+133 5/8" and angle ("*t*") of 49.80° or pitch of 14 3/16". Using my x brace calculator, I 
+get a brace length ("*l*") of 133 15/16" and an angle ("*t*") of 49.91° or pitch of 14 1/4".
 
 As Kyle days "the math doesn't lie".
