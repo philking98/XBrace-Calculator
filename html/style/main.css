@@ -92,3 +92,15 @@ img {
     margin: 1em 0; 
     display: block; /* Helps with centering and layout consistency */
 }
+
+.header {
+	margin: 10px 20px;
+	line-height: 1.5em;
+	text-align: center;
+}
+
+.header-links {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
