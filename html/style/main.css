@@ -26,6 +26,11 @@ p {
 	margin: 10px 20px;
 }
 
+.var-text {
+	font-family: Times, Times-Roman, serif;
+	font-style: italic;
+}
+
 input {
 	font-size: 12px;
 	font-family: Arial;
@@ -61,7 +66,6 @@ label {
 }
 
 .calc-button {
-/*	font-size: 14px;*/
 	border-radius: 6px;
 	border: 1px solid black;
 	cursor: pointer;
@@ -77,3 +81,14 @@ label {
   box-shadow: 2px 2px 5px lawngreen;
 }
 
+img {
+    /* This is the key: The image will take up 100% of the container's width */
+    width: 100%; 
+    /* Ensures the image does not exceed its original size if the container is larger */
+    max-width: 100%; 
+    /* This is crucial for maintaining the image's aspect ratio */
+    height: auto; 
+    /* Optional: Add some margin below the image for spacing */
+    margin: 1em 0; 
+    display: block; /* Helps with centering and layout consistency */
+}
