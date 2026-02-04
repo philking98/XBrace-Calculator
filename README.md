@@ -29,4 +29,4 @@ the bay ("*w*") is 7' 2 1/4", the lumber is 2x6 so the width of the brace ("*d*"
 133 5/8" and angle ("*t*") of 49.80° or pitch of 14 3/16". Using my x brace calculator, I 
 get a brace length ("*l*") of 133 15/16" and an angle ("*t*") of 49.91° or pitch of 14 1/4".
 
-As Kyle days "the math doesn't lie".
+As Kyle says "the math doesn't lie".
