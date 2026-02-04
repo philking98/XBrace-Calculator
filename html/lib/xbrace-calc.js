@@ -107,8 +107,8 @@ function decimalToImperial(decimal) {
 
 function parseInches(s) {
 
-	s = s.replaceAll("”", '"');
-	s = s.replaceAll("’", "'");
+//	s = s.replaceAll("”", '"');
+//	s = s.replaceAll("’", "'");
 
 	let inches = parse.F(s);
 
